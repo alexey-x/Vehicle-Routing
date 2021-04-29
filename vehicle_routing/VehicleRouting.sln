@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "VehicleRouting", "VehicleRouting.pyproj", "{0BD7AA4A-B25A-4B04-9E1B-147A910C5A94}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0BD7AA4A-B25A-4B04-9E1B-147A910C5A94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BD7AA4A-B25A-4B04-9E1B-147A910C5A94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FD8152E8-73BA-4748-BE1B-C369951D75ED}
+	EndGlobalSection
+EndGlobal
