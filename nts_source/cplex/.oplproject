@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="ASCII"?><project>
+	<version>1.0</version>
+	<configs>
+		<config default="false" name="test" category="opl">
+			<ref name="test.mod" type="model">
+			</ref>
+			<ref name="test.dat" type="data">
+			</ref>
+		</config>
+		<config default="true" name="cfg_Answer" category="opl">
+			<ref name="LNG transport.mod" type="model">
+			</ref>
+			<ref name="LNG transport.dat" type="data">
+			</ref>
+		</config>
+		<config default="false" name="cfg" category="opl">
+			<ref name="02_VRP_TW.mod" type="model">
+			</ref>
+			<ref name="02_VRP_TW.dat" type="data">
+			</ref>
+		</config>
+	</configs>
+	
+</project>
