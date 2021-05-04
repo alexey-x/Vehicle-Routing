@@ -10,7 +10,7 @@ def run(in_file: str) -> None:
     reader = DataReader(in_file)
     processor = DataProcessor(reader)
     task = LinProgMaker(processor)
-    task.solve(plp.PULP_CBC_CMD(msg=True))
+    task.solve()
 
 
 def main():
