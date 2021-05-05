@@ -29,6 +29,8 @@ class LinProgMaker:
 
         self.ct_demand()
 
+        self.ct_flux()
+
         self.ct_capacity()
 
         self.prob.solve(plp.PULP_CBC_CMD(msg=True))
@@ -169,8 +171,8 @@ class LinProgMaker:
         for i in self.cities:
             self.prob += (
                 plp.lpSum(self.d[k, n, i] for k in self.cars for n in self.trips)
-                == self.order_demand[i]
-            )  # - lack[i]
+                == self.order_demand[i] - self.lack[i]
+            )
 
     def ct_flux(self) -> None:
         for k in self.cars:
