@@ -138,10 +138,10 @@ class LinProgMaker:
                 for i, j in self.routes:
                     if j == self.DEPOT:
                         continue
-                    self.prob += self.t[k, n, i] + self.route_time[i, j] <= t[
+                    self.prob += self.t[k, n, i] + self.route_time[i, j] <= self.t[
                         k, n, j
                     ] + self.MAX_PERIOD * (1 - self.x[k, n, (i, j)])
-                for i in cities:
+                for i in self.cities:
                     self.prob += self.t[k, n, i] + self.route_time[
                         i, self.DEPOT
                     ] <= self.te[k, n] + self.MAX_PERIOD * (
@@ -196,7 +196,7 @@ class LinProgMaker:
                     plp.lpSum(self.d[k, n, i] for i in self.cities)
                     <= self.car_capacity[k]
                 )
-                for i in cities:
+                for i in self.cities:
                     self.prob += (
                         self.d[k, n, i] <= self.car_capacity[k] * self.y[k, n, i]
                     )
