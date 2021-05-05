@@ -21,6 +21,17 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="convert_dataframe.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="data_processor.py" />
+    <Compile Include="data_writer.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="linprog_maker.py" />
+    <Compile Include="data_reader.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="VehicleRouting.py" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
