@@ -12,7 +12,11 @@ def run(in_file: str, out_file: str) -> None:
     processor = DataProcessor(reader)
     task = LinProgMaker(processor)
     task.solve()
-    DataWriter(task, out_file).save()
+    writer = DataWriter(task, out_file)
+    writer.save()
+
+    print(f"Sales profit = {writer.calc_sales_profit()}")
+    print(f"Delivery cost = {writer.calc_delivery_cost()}")
 
 
 def main():
