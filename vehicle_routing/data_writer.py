@@ -75,6 +75,28 @@ class DataWriter:
             row_number += 1
         return delivery
 
+    def calc_sales_profit(self) -> float:
+        return sum(
+            (
+                self.task.order_price[i] * self.task.d[k, n, i].value()
+                for k in self.task.cars
+                for n in self.task.trips
+                for i in self.task.cities
+            )
+        )
+
+    def calc_delivery_cost(self) -> float:
+        return sum(
+            (
+                self.task.route_distance[r]
+                * self.task.car_price[k]
+                * self.task.x[k, n, r].value()
+                for k in self.task.cars
+                for n in self.task.trips
+                for r in self.task.routes
+            )
+        )
+
     def save(self) -> None:
 
         self.make_vehicle_routing().to_excel(
