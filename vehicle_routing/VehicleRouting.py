@@ -19,10 +19,14 @@ def run(in_file: str, out_file: str) -> None:
     print(f"Delivery cost = {writer.calc_delivery_cost()}")
 
 
+def get_out_file_name(in_file: str) -> str:
+    in_path, in_file_name = path.split(in_file)
+    return path.join(in_path, "output_" + in_file_name)
+
 def main():
     in_file = sys.argv[1]
-    in_path, in_file_name = path.split(in_file)
-    out_file = path.join(in_path, "output_" + in_file_name)
+    out_file = get_out_file_name(in_file)
+
     print(f"Input file -> {in_file}")
     print(f"Output file -> {out_file}")
 
