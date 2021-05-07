@@ -1,3 +1,5 @@
+from math import ceil
+
 from convert_dataframe import convert_dataframe_to_dict
 from convert_dataframe import convert_dataframe_to_set
 
@@ -22,7 +24,7 @@ class DataProcessor:
     def get_trips(self) -> list:
         tot_demand = self.orders["Demand"].sum()
         tot_capacity = self.vehicles["Capacity"].sum()
-        return list(range(1, tot_demand // tot_capacity + 2))
+        return list(range(1, ceil(tot_demand/tot_capacity) + 1))
 
     def get_cities(self) -> set:
         return self.get_all_cities().difference(set([self.get_depot()]))
