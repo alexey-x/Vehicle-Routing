@@ -2,8 +2,13 @@
 
 It is kind of Multi Trip Vehicle Routing Problem with Time Windows.
 
-The description of the problem is in ProblemDescription(RU) python notebook..
+The description of the problem is in ProblemDescription_RU python notebook.
 
-It is in russian.
+Simple examples are in the ProblemTestExamples_RU notebook.
 
-Shot english version may be written by request.
+ProblemNTS_Simple_RU rather useless task was not solve due to its size.
+Special treatment is needed.
+
+All these notebook are in russian.
+
+Short english version may be written by request.
