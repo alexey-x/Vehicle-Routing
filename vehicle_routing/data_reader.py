@@ -1,9 +1,9 @@
 import pandas as pd
 
-
 class DataReader:
     def __init__(self, in_file: str) -> None:
         self.in_file = in_file
+        self.trips = []
 
     def read_parameters(self) -> pd.DataFrame:
         sheet_name = "Parameters"
@@ -24,6 +24,9 @@ class DataReader:
     def read_routes(self) -> pd.DataFrame:
         sheet_name = "Routes"
         return pd.read_excel(self.in_file, sheet_name=sheet_name)
+
+    def set_trips(self, trips: list) -> None:
+        self.trips = trips
 
 
 if __name__ == "__main__":
